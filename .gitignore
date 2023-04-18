@@ -11,3 +11,8 @@
 /third.py
 /time_calc.py
 /websocket.py
+.vscode/settings.json
+file_read/third.py
+file_read/file.txt
+.DS_Store
+lesson_projekt/calculator.py
