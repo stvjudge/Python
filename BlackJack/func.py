@@ -5,7 +5,7 @@ import os
 
 
 def show_logo():
-    os.system("clear")
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(art.logo)
 
 
