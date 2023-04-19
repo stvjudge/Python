@@ -16,16 +16,19 @@ def rand_from_dict():
 def higher_or_lower(value: str, vs1: dict, vs2: dict):
     if vs1["follower_count"] > vs2["follower_count"] and value == "a":
         return vs1
-    if vs1["follower_count"] < vs2["follower_count"] and value == "a":
-        return 0
-    if vs1["follower_count"] > vs2["follower_count"] and value == "b":
+    if (
+        vs1["follower_count"] < vs2["follower_count"]
+        and value == "a"
+        or vs1["follower_count"] > vs2["follower_count"]
+        and value == "b"
+    ):
         return 0
     if vs1["follower_count"] < vs2["follower_count"] and value == "b":
         return vs2
 
 
 def vs(point, vs1: dict):
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
     out_logo()
     # dictionary
     if point == 0:
