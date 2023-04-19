@@ -9,9 +9,9 @@ def greet():
 
 
 def others():
-    if input("Are there any other bidders? Type 'yes' or 'no'.\n") == 'yes':
+    if input("Are there any other bidders? Type 'yes' or 'no'.\n") == "yes":
         # clear screen
-        os.system("clear")
+        os.system("cls" if os.name == "nt" else "clear")
         return 0
     else:
         return 1
